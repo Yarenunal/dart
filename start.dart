@@ -136,7 +136,7 @@ if (aysecompany.length > companylenght){
   result= result + xcompany;
 }
 
-if (result.isEmpty){
+if (result.isEmpty){ //result==0 da yazabilirdik
 print("patron bulamadik");
 }
 else{
