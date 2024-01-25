@@ -175,7 +175,7 @@
 */
 
 
-// 2. KISIM
+/*   // 2. KISIM   LİSTELER
 void main(){
 
 //LİSTE OLUŞTURMA
@@ -230,4 +230,93 @@ void main(){
       }
 
   }
+      //var user ='a';//string
+      //var user1=[]; //liste
+    print('aaa');
+    List<dynamic> user = [1 ,'a' , true];//birden çok türdekileri aynı dizide kullanabildik ama fazla önerilmiyor
+
+    for (var item in user)//for in tipi 
+    {
+      print(item);
+    }
+
+
+
+    List<String> userNames = ['yaren','leyla','emre'];
+
+    userNames.contains('leyla');//liste içinde leyla var mı onu arar. varsa true yoksa false döndrür
+    // ya da
+    for (var item in userNames) {
+      if(item == 'yaren'){
+      print('var');}// şeklinde for in kullanılarak uzun uzun yazılır
+      
+    }}
+*/  
+
+/*  //3.KISIM   FONKSİYONLAR VE PARAMETRE
+void main(){
+  //benim bir musterim var parasi var mi yok mu kontrol et
+
+  final int userMoney =0;
+  controluserMoney(userMoney,0); 
+
+  final int userMoney2 =5;
+  controluserMoney(userMoney2, 0);
+
+  final newUserMoney =50;
+  int result = convertToDolar(newUserMoney);
+  print (result);
+
+//yeni musteri gelir parasi 50
+//parasını dolara çevirmek istiyor kaç dolar yaptığını öğrenmek istiyor.
+final newResult = convertToStandartDolar(100,dolarIndex:45);
+final newResult2 = convertToStandartDolar(100);
+final newResult3 = convertToEuro(userMoney:500);
+print(newResult3);
+print(newResult2);
+print(newResult);
+sayHello('yaren');
+
+}
+
+void controluserMoney(int money , int minValue){
+  if (money> minValue){
+    print('para var');
+  }
+  else{
+    print('para yok');
+  }
+}
+
+
+
+int convertToDolar(int userMoney){ //geriye değer döndürmeli fonk
+  return userMoney ~/ 30; //~ bu işaret int çıktıyı double a çevirir tam kısmı yazdırır
+}
+
+
+//bana bir dolar hesaplama yap ben sana soylemezsem yeni bir durum var diye her zaman 30 al
+
+int convertToStandartDolar(int userMoney , {int dolarIndex=30})//opsiyonellik bi sey denmezse bunu alır
+{
+  return (userMoney ~/ dolarIndex);
+}
+//bi değeri tanımlamazsan dart ta null gider
+
+
+int convertToEuro({required int userMoney ,int dolarIndex = 30} ){
+  return userMoney ~/ dolarIndex;
+
+}
+
+String sayHello(String name){
+  return 'hello $name';
+  
+}*/
+
+
+
+//MAP
+void main(){
+  
 }
