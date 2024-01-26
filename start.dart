@@ -318,5 +318,7 @@ String sayHello(String name){
 
 //MAP
 void main(){
-  
+  Map<String , int> users = {}
+
+
 }
