@@ -375,13 +375,88 @@ void main(){
 */
 
 
-// CLASS 
+/*  // CLASS 
 void main(){
 
+/*
+int ? newmoney; //null değersiz olama ihtimalini belirler kodu kurtarır
+print(newmoney ! + 10); //yukarda değer olmayabilir olarak tanımladık değişkeni ve burda toplama yaptıırmaya çalışıyoruz
+//olmayan bir şeyi toplayamazsın sistem hata verir
 
+
+
+int ? newMoney;
+if(newMoney != null){
+  print(newMoney + 10);
+  //print(newmoney! + 10)
+}//yukarıdaki durum bu şekildede yazılabilir bu kod çalışır
+
+*/
+
+//bankaya 3 tane müşteri gelir birinin 100tl si var diğerlerinin hesabı hiç yok diğerinin 0tlsi var
+//hesabı olmayana gelin hesap açalım , 0tlsi olanı kov , 100tlsi olna müşterim hoşgeldin
+
+List<int?> customerMoney =[100 , null , 0];
+//int boş değer de taşıyabilir olacağından ? koyarız
+  for (var item in customerMoney) {
+    if(item !=null){
+      if(item>0){
+        print('beyfendi');
+      }else {
+        print('bye');
+      }
+    }else{
+      print('haydi hesap açalım');
+    }
+   //-------
+  bool result = controlMoney (item)== null ? false : true;
+  //null sa false döndürür kod
+  print(result);
+  }  
+}
+  //yeni bir metot olsun hesabı yoksa ya da para sıfırsa hesabı yok sayalım
+  int ? controlMoney(int? money){
+    if(money != null && money > 0){
+      return money;
+    }
+    //if(money==null || money=0 ){
+    //return null;
+    //}
+
+  }
+*/
+
+void main(){
+print ('--'*10);//10 tane - yazdırır kısa yol
+int CustomerMoney = 15;
+User user1 = User('YYE',15,'ankara',21);
+User user2 = User('YY', 1000, null , null);
+
+
+print(user1.name); //çıktı VB olur
 
 
 }
+
+//adı olmak zorunda
+//parası olmak zorunda
+//yasını vermeyebilir
+//citysini vermeyebilir
+  class User{
+    late final String name;//bu değer başta null ama sonradan dolacak anlamı taşır
+    late final int money;
+    late final int ? age;
+    late final String ? city ;
+
+    User(String name ,int money ,String ? city ,int ? age){
+      this.name = name;
+      this.money=money;
+      this.age=age;
+      this.city=city;
+
+    }  
+  }
+
 
 
 
