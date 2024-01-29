@@ -316,9 +316,81 @@ String sayHello(String name){
 
 
 
-//MAP
+/*  //MAP
 void main(){
-  Map<String , int> users = {}
+
+  Map<String,int> users = {'ahmet':20, 'mehmet':30};
+  //müşteri ahmeti ne kadar parası vaar
+  print('ahmetin parasi ${users['ahmet']}');//burda ahmetin value sunu döndürür bize
+
+  //musteri kimler var senin listende
+  for (var item in users.keys)//keys dersek string döner value dersrek intler döner
+   {
+      print('${item} - ${users[item]}');
+           //string    //int değerleri 
+  }
+  //for ile gösterimi
+  for (var i = 0; i < users.length; i++) {
+    print('${users.keys.elementAt(i)} - ${users.values.elementAt(i)}');
+      //elementat metotu o indexi döndürür.
+  }
+
+
+  //ben bankayım .musterilerimin birden fazla hesabı olabilir
+  //ahmet bey 3 hesabı var sırasıyla 100 ,300, 200
+  //mehmet bey 2 hesabı var 30 50
+  //veli bey 1 hesap 30
+  //adamların hesaplarını kontrol et herhangi bir hesapta 150tl den fazla olan varsa kredinğiz hazır de
+  print('----------');
+  final Map<String,List<int>> vbBank ={
+    'ahmet':[100,200,300],
+    //list yapmamaızın sebebi birden fazla int içermesi
+
+  };
+  //bir başka gösterim  ise:
+  vbBank['mehmet']=[30,50];
+  vbBank['veli']=[30];
+ 
+  for (var item in vbBank.keys) {
+    //bankanın tüm elemanları
+    for (var money in vbBank[item]!) {
+      //her key in valuesu olamyabilir null olarak ! konulur
+      if(money>150){
+        print('kredin hazır');
+        //return;//bunu yazmamız 1 kere göndermesini sağlar mesajı maini sonlandırır
+        break;//bölgesel sonlandırma
+      }
+    }
+  }
+  //bankadaki müşterileirn toplam meblasını merak ediyorum
+  for (var item in vbBank.keys) {
+    //vbBank[item] demek müşterinin hesapları demek
+    int result=0;
+    for (var money in vbBank[item]!) {
+      result=result+money;
+      }
+      print('${vbBank[item]} senin toplam paran-> $result');
+  }
+}
+*/
+
+
+// CLASS 
+void main(){
+
+
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
