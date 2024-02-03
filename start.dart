@@ -429,13 +429,27 @@ List<int?> customerMoney =[100 , null , 0];
 void main(){
 print ('--'*10);//10 tane - yazdırır kısa yol
 int CustomerMoney = 15;
-User user1 = User('YYE',15,'ankara',21);
-User user2 = User('YY', 1000, null , null);
+User user1 = User('YYE',15, city:'ankara',age:21);
+//User user2 = User('YY', 1000, null , null);
+
+final user3 = User('aa',159 , age:23);
 
 
-print(user1.name); //çıktı VB olur
+print(user1.name); //çıktı YYE olur
 
+//musteri so gelen kisinin citysinine göre kampanya yapacak eger istanbul ise
 
+if(user3.city== null){
+  print('musteri sehir ismi girmemeiş');
+  }else{
+    if(user3.city!.isEmpty){
+      print('okok');
+    }
+    if(user3.city== 'istanbul'){
+      print('tebrikler kazandınız');
+    }
+  }
+  print(user3.usercode);
 }
 
 //adı olmak zorunda
@@ -448,16 +462,20 @@ print(user1.name); //çıktı VB olur
     late final int ? age;
     late final String ? city ;
 
-    User(String name ,int money ,String ? city ,int ? age){
+    late final String usercode;
+
+    User(String name ,int money ,{String ? city ,int ? age}){
       this.name = name;
       this.money=money;
       this.age=age;
       this.city=city;
-
+      usercode = (city ?? 'ist')+ name;
     }  
   }
 
-
+class User2{
+  
+}
 
 
 
