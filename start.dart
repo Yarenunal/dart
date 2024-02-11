@@ -457,24 +457,36 @@ if(user3.city== null){
 //yasını vermeyebilir
 //citysini vermeyebilir
   class User{
-    late final String name;//bu değer başta null ama sonradan dolacak anlamı taşır
+    late final String name;//late: bu değer başta null ama sonradan dolacak anlamı taşır
     late final int money;
     late final int ? age;
     late final String ? city ;
 
     late final String usercode;
 
+    final String id;
+
     User(String name ,int money ,{String ? city ,int ? age}){
       this.name = name;
       this.money=money;
       this.age=age;
       this.city=city;
-      usercode = (city ?? 'ist')+ name;
+      usercode = (city ?? 'ist')+ name; //city değeri null sa ist yazdır demektir
+
     }  
   }
 
 class User2{
-  
+   late final String name;//late :bu değer başta null ama sonradan dolacak anlamı taşır
+    late final int money;
+    late final int ? age;
+    late final String ? city ;
+
+    late final String usercode;
+
+    User2(this.name, this.money ,{this.age , this.city}){
+     usercode = (city ?? 'ist')+ name;
+    }
 }
 
 
